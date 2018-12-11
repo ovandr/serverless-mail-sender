@@ -1,0 +1,5 @@
+Resources:
+    SESConfigurationSet:
+      Type: 'AWS::SES::ConfigurationSet'
+      Properties:
+        Name: ${self:custom.resourcePrefix}-statistic

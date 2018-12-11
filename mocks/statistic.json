@@ -1,0 +1,9 @@
+{
+    "Records": [
+        {
+            "Sns": {
+                "Message": "{ \"eventType\": \"Send\", \"mail\": { \"source\": \"source\"} }"
+            }
+        }
+    ]
+}

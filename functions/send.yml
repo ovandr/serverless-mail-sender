@@ -1,0 +1,17 @@
+send:
+  handler: src/mail.send
+  events:
+    - http:
+        path: send
+        method: post
+        cors: true
+
+sqs:
+  handler: src/mail.sqsHandler
+  events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - MailQueue
+              - Arn
+          batchSize: 1

@@ -1,0 +1,36 @@
+{
+  "name": "serverless-mail-sender",
+  "version": "1.0.0",
+  "description": "Serverless application for E-mail sending via Amazon SES",
+  "scripts": {
+    "test": "jest",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [
+    "serverless",
+    "email",
+    "SES"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ovandr/serverless-mail-sender.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.13",
+    "@types/jest": "^23.3.9",
+    "@types/node": "^8.10.37",
+    "jest": "^23.6.0",
+    "merge": "^1.2.1",
+    "serverless": "^1.32.0",
+    "serverless-offline": "^3.31.0",
+    "serverless-webpack": "^5.2.0",
+    "ts-jest": "^23.10.4",
+    "ts-loader": "^5.3.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.24.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

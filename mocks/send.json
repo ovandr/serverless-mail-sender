@@ -1,0 +1,3 @@
+{
+    "body": "{ \"to\": \"success@simulator.amazonses.com\", \"from\": \"from@ovandr.com\", \"subject\": \"Test Subj\", \"text\": \"Test text\", \"html\": \"<strong>Test html</strong>\" }"
+}

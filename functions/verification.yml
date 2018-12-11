@@ -1,0 +1,21 @@
+verifyEmail:
+  handler: src/verification.verifyEmail
+  events:
+    - http:
+        path: verify/email
+        method: post
+        cors: true
+verifyDomain:
+  handler: src/verification.verifyDomain
+  events:
+    - http:
+        path: verify/domain
+        method: post
+        cors: true
+getVerificationStatus:
+  handler: src/verification.getStatus
+  events:
+    - http:
+        path: verify/status
+        method: post
+        cors: true
