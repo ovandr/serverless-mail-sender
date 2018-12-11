@@ -1,8 +1,6 @@
 import { createTransport, SendMailOptions, SentMessageInfo, Transporter } from 'nodemailer';
 import SES from 'aws-sdk/clients/ses';
 
-import renderTemplate from './template.parser';
-
 export default class EmailSender {
     private transporter: Transporter;
 
@@ -17,11 +15,5 @@ export default class EmailSender {
         options.headers['X-SES-CONFIGURATION-SET'] = process.env.SES_CONFIG_SET;
 
         return this.transporter.sendMail(options);
-    }
-
-    public sendTemplate(options: SendMailOptions, template: string, data: {}) {
-        options.html = renderTemplate(template, data);
-
-        return this.sendEmail(options);
     }
 }

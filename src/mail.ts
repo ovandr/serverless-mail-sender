@@ -15,21 +15,12 @@ const sendEmail = async (options: SendMailOptions) => {
     return sender.sendEmail(options);
 };
 
-const sendTemplate = async (options: SendMailOptions, template: string, data: {}) => {
-    return sender.sendTemplate(options, template, data);
-};
-
 export async function send(event: APIGatewayEvent) {
-    const options: SendMailOptions = JSON.parse(event.body);
-
     const [quota, sqsAttributes] = await Promise.all([
         ses.getSendQuota().promise(),
         sqs.getQueueAttributes({
             QueueUrl: queueUrl,
             AttributeNames: ['ApproximateNumberOfMessages'],
-        }).promise(),
-        ses.getIdentityVerificationAttributes({
-            Identities: [options.sender.toString()],
         }).promise(),
     ]);
 

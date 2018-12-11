@@ -21,6 +21,7 @@
     "@types/aws-lambda": "8.10.13",
     "@types/jest": "^23.3.9",
     "@types/node": "^8.10.37",
+    "aws-sdk-mock": "^4.3.0",
     "jest": "^23.6.0",
     "merge": "^1.2.1",
     "serverless": "^1.32.0",
